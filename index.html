@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+	<title>Sri Pavitra Gold Bullion</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	
+	<!--  Needs to be updated before publishing  End -->
+	
+	<!-- Jquery Mobile JS and CSS -->
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" />
+	<link rel="stylesheet" href="css/jquery.mobile.theme-1.4.5.min.css" />
+	<link rel="shortcut icon" 	type="image/x-icon" href="/favicon.ico" >
+	
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
+	
+	
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	
+	
+	<!-- Custom JS and css -->
+	<link rel="stylesheet" href="css/pgGetMobileRates.css?ts=20151118151515" />
+	<!-- <link rel='stylesheet' type='text/css' href='css/rupee.css'></link> -->
+	<script src="./js/pgGetMobileRates.js?ts=20151118151515"></script>
+
+	
+</head> 
+
+<body onload="initPGMobileApp();">
+	<input type="hidden" id="id_pg_hid_mob_param1" 		value="0" />
+	<input type="hidden" id="id_pg_hid_mob_param2" 		value="0" />
+	<input type="hidden" id="id_pg_hid_mob_param3" 		value="0" />
+	<input type="hidden" id="id_pg_hid_mob_param4" 		value="0" />
+	<input type="hidden" id="id_pg_hid_mob_param5" 		value="0" />
+	<input type="hidden" id="id_pg_hid_mob_param6" 		value="0" />
+	<input type="hidden" id="id_pg_hid_mob_param7" 		value="0" />
+	<input type="hidden" id="id_pg_hid_mob_param8" 		value="0" />
+	<input type="hidden" id="id_pg_hid_mob_param9" 		value="0" />
+	<input type="hidden" id="id_pg_hid_mob_param10" 		value="0" />
+	
+	
+<div data-role="page" id="mainpage" data-theme="b"   class="cl_div_content">
+
+
+	<div data-role="header" data-theme="a" class="cl_pg_div_header_top">
+		<img src="images/SriPavitraGold_logo.png" />
+		<!--
+		<div style="text-align:center;">
+			
+			Sri Pavitra Gold Bullion Logo
+			
+		</div>
+		-->
+	</div>
+	
+	
+	<div data-role="content">	
+		
+		<div class="ui-grid-a cl_div_grid_wrapper" id="id_div_grid_wrapper">
+				<!-- Default it to No Steaming -->
+				<!-- <div class='cl_stream_off' > <span style='color:#E35E1B'>oops!!! </span>  No Data Connection... </div> -->
+			
+				<div class="ui-grid-b cl_div_grid_comex" id="id_div_grid_comex">
+					
+					<!-- Current hidden start -->
+					<div class='ui-block-a cl_td_comex_data cl_div_symbol_xauusd_bid cl_div_bk_sym_xauusd_bid' style="display:none;">
+						<span id="id_span_data_comex_g_bid"></span>
+					</div>
+					<div class='ui-block-b cl_td_comex_data  cl_div_symbol_xagusd_bid cl_div_bk_sym_xagusd_bid' style="display:none;" >
+						<span id="id_span_data_comex_s_bid"></span>
+					</div>
+					<div class='ui-block-c cl_td_comex_data cl_div_symbol_usdinr_bid cl_div_bk_sym_usdinr_bid' style="display:none;" >
+						<span id="id_span_data_comex_u_bid"></span>					
+					</div>
+					<!-- Current hidden end -->
+					
+					
+					<div class='ui-block-a cl_td_comex_data cl_div_symbol_xauusd_ask cl_div_bk_sym_xauusd_ask' >
+						<img src="images/flag_usa.png" /> <br>
+						<span id="id_span_data_comex_g_ask"></span>
+					</div>
+					<div class='ui-block-b cl_td_comex_data cl_div_symbol_xagusd_ask cl_div_bk_sym_xagusd_ask' >
+						<img src="images/flag_usa.png" /> <br>
+						<span id="id_span_data_comex_s_ask"></span>
+					</div>	
+					<div class='ui-block-c cl_td_comex_data cl_div_symbol_usdinr_ask cl_div_bk_sym_usdinr_ask' >
+						<img src="images/flag_ind.png" /> <br>
+						<span id="id_span_data_comex_u_ask"></span>
+					</div>	
+					
+					<!--
+					<div class='ui-block-a cl_td_comex_label' >COMEX</div>	
+					<div class='ui-block-b cl_td_comex_label' >BID</div>	
+					<div class='ui-block-c cl_td_comex_label' >ASK</div>	
+
+					<div class='ui-block-a cl_td_comex_data cl_div_comex_gold  cl_td_comex_label2'>Gold </div>	
+					<div class='ui-block-b cl_td_comex_data cl_div_comex_gold'> <span id="id_span_data_comex_g_bid"></span></div>	
+					<div class='ui-block-c cl_td_comex_data cl_div_comex_gold'><span id="id_span_data_comex_g_ask"></span></div>
+				
+					<div class='ui-block-a cl_td_comex_data cl_div_comex_silver cl_td_comex_label2'>Silver </div>	
+					<div class='ui-block-b cl_td_comex_data cl_div_comex_silver'> <span id="id_span_data_comex_s_bid"></span></div>	
+					<div class='ui-block-c cl_td_comex_data cl_div_comex_silver'><span id="id_span_data_comex_s_ask"></span></div>	
+				
+					<div class='ui-block-a cl_td_comex_data cl_div_comex_usdinr cl_td_comex_label2'>USDINR </div>	
+					<div class='ui-block-b cl_td_comex_data cl_div_comex_usdinr'> <span id="id_span_data_comex_u_bid"></span></div>	
+					<div class='ui-block-c cl_td_comex_data cl_div_comex_usdinr'><span id="id_span_data_comex_u_ask"></span></div>
+					-->
+				</div>
+				
+				
+				<br/>
+				<div class="ui-grid-a cl_div_grid_symbol" id="id_div_grid_symbol">
+					<div class='ui-block-a cl_td_symbol_label' >Symbol</div>	
+					<!--<div class='ui-block-b cl_td_symbol_label' style="display:none;" >Buy</div>	-->
+					<div class='ui-block-b cl_td_symbol_label' >Sell Rate</div>
+						
+					<div class='ui-block-a cl_td_symbol_data cl_div_symbol_g999r  cl_td_symbol_label2'>Gold <span style="font-size: 8pt;">(RTGS)</span></div>	
+					<!-- <div class='ui-block-b cl_td_symbol_data cl_div_symbol_g999r cl_div_bk_sym_g999r_bid'  style="display:none;"> 
+						<span id="id_span_data_symbol_g999r_bid"></span>
+					</div>		-->
+					<div class='ui-block-b cl_td_symbol_data cl_div_symbol_g999r  cl_div_bk_sym_g999r_ask'>
+						<img src="images/flag_ind.png" /> &nbsp;
+						<span id="id_span_data_symbol_g999r_ask"></span>
+					</div>
+					
+					<div class='ui-block-a cl_td_symbol_data cl_div_symbol_g999t  cl_td_symbol_label2'>Gold <span style="font-size: 8pt;">(TCS)</span></div>	
+					<!-- <div class='ui-block-b cl_td_symbol_data cl_div_symbol_g999t'  style="display:none;"> <span id="id_span_data_symbol_g999t_bid"></span></div>		-->
+					<div class='ui-block-b cl_td_symbol_data cl_div_symbol_g999t'>
+						<img src="images/flag_ind.png" /> &nbsp;
+						<span id="id_span_data_symbol_g999t_ask"></span>
+					</div>
+					
+					<div class='ui-block-a cl_td_symbol_data cl_div_symbol_gft999r  cl_td_symbol_label2'>Gold FT <span style="font-size: 8pt;">(RTGS)</span></div>	
+					<!-- <div class='ui-block-b cl_td_symbol_data cl_div_symbol_gft999r'  style="display:none;"> <span id="id_span_data_symbol_gft999r_bid"></span></div>		-->
+					<div class='ui-block-b cl_td_symbol_data cl_div_symbol_gft999r'>
+						<img src="images/flag_ind.png" /> &nbsp;
+						<span id="id_span_data_symbol_gft999r_ask"></span>
+					</div>
+					
+					<div class='ui-block-a cl_td_symbol_data cl_div_symbol_gft999t  cl_td_symbol_label2'>Gold FT <span style="font-size: 8pt;">(TCS)</span></div>	
+					<!-- <div class='ui-block-b cl_td_symbol_data cl_div_symbol_gft999t'  style="display:none;"> <span id="id_span_data_symbol_gft999t_bid"></span></div>		-->
+					<div class='ui-block-b cl_td_symbol_data cl_div_symbol_gft999t'>
+						<img src="images/flag_ind.png" /> &nbsp;
+						<span id="id_span_data_symbol_gft999t_ask"></span>
+					</div>
+					
+					<div class='ui-block-a cl_td_symbol_data cl_div_symbol_s999r  cl_td_symbol_label2'>Silver <span style="font-size: 8pt;">(RTGS)</span></div>	
+					<!-- <div class='ui-block-b cl_td_symbol_data cl_div_symbol_s999r'  style="display:none;"> <span id="id_span_data_symbol_s999r_bid"></span></div>		-->
+					<div class='ui-block-b cl_td_symbol_data cl_div_symbol_s999r'>
+						<img src="images/flag_ind.png" />  &nbsp;&nbsp;&nbsp;&nbsp;
+						<span id="id_span_data_symbol_s999r_ask"></span>
+					</div>
+					
+					<div class='ui-block-a cl_td_symbol_data cl_div_symbol_s999t  cl_td_symbol_label2'>Silver <span style="font-size: 8pt;">(TCS)</span></div>	
+					<!-- <div class='ui-block-b cl_td_symbol_data cl_div_symbol_s999t'  style="display:none;">  <span id="id_span_data_symbol_s999t_bid"></span></div>		-->
+					<div class='ui-block-b cl_td_symbol_data cl_div_symbol_s999t'>
+						<img src="images/flag_ind.png" /> &nbsp;&nbsp;&nbsp;&nbsp;
+						<span id="id_span_data_symbol_s999t_ask"></span>
+					</div>
+					
+				</div>
+				
+				
+		</div>
+
+		<div class="cl_pg_div_outer_marquee">	
+			<marquee
+				direction=left
+				scrolldelay="150"  
+				onmouseover="this.stop();" 
+				onmouseout="this.start();" 
+				class="cl_pg_marq_scrollMsg"
+				id="id_pg_scroll_marq" >
+				
+				<span class="cl_pg_span_contact_label">Booking: </span>
+				<span class="cl_pg_span_contact1"> +91 866 6006662 </span> /  
+				<span class="cl_pg_span_contact2">+91 9246849119 </span> 
+				&nbsp;&nbsp;&nbsp;
+				<span class="cl_pg_span_contact_label">BackOffice: </span>
+				<span class="cl_pg_span_contact1"> +91 866 2578588 </span> /  
+				<span class="cl_pg_span_contact2">+91 9494323279 </span>
+						
+			</marquee>
+		</div>
+		
+		<!--
+		<br/>
+		<div class="ui-grid-a cl_div_grid_wrapper">	
+			<div class='ui-block-a cl_pg_div_booking'>
+				<table class="cl_pg_tbl_booking">
+					<tr>
+						<td style="background-color: #858A8C; font-weight: bold;">
+							Booking Desk
+						</td>
+					
+					</tr>
+					<tr>
+						<td style="background-color: #B8099D;">
+							<img src="images/booking.png" />
+							&nbsp;&nbsp; +91 866 6006662
+							&nbsp;&nbsp; +91 9246849119
+						</td>
+					
+					</tr>
+				</table>
+			</div>
+			<div class='ui-block-b cl_td_comex_data'>
+				Jain
+			</div>	
+		</div>
+		-->
+		<!--
+	   <a href="#popup" id="id_btn_updateapp" data-role="button" data-rel="dialog" data-transition="pop" data-theme="a">
+			Update App
+		</a>
+		
+	   <script>
+			//$('#id_btn_updateapp').buttonMarkup({ inline: true });
+			$('#id_btn_updateapp').css("display", "none");
+	   </script>
+	   -->
+
+	   
+   
+	</div><!-- /content -->
+
+	
+	<!--
+	<div data-role="footer" data-position="fixed" data-theme="a" style="background-color:#F0F097;">
+	<h1>
+	   <div class="cl_divPoweredBy">
+			<span style="color:#33FC21;">Powered by</span> 
+			<span style="color:#FAFF69;">magic</span><span style="color:#33FC21;">Bul</span>   
+	   </div>
+</h1>	   
+	</div>
+	-->
+	
+	
+</div><!-- /page -->
+
+
+
+<div data-role="page" id="popup">
+
+	<div data-role="header" data-theme="e">
+		<h1>Update App</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="d">	
+		<p> Dear Customer, Please update latest version of this App from Store to enjoy new features. </p>
+		<p><a href="#mainpage" data-rel="back" data-role="button" data-inline="true" data-icon="arrow-l">Back</a></p>	
+	</div><!-- /content -->
+	
+	<div data-role="footer">
+		<h4>Thank You</h4>
+	</div><!-- /footer -->
+</div><!-- /page popup -->
+
+</body>
+</html>
