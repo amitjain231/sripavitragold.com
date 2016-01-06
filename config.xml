@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
     <widget xmlns = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.phonegap.vasavigold.live"
-        versionCode="4" 
+        id        = "com.phonegap.sripavitragold.live"
+        versionCode="1" 
         version   = "1.0.0">
 
 
-    <name>Vasavi Gold</name>
+    <name>Sri Pavitra Gold Bullion</name>
 
     <description>
-        Vasavi Gold is a leading wholesaler of gold bar 999 purity in spot market primarily based in Eluru, Andhra Pradesh
+        Sri Pavitra Gold Bullion is a leading Gold and Silver Bullion dealer located at the heart of Vijayawada city, Andhra Pradesh
     </description>
 
     <author href="http://www.magicbul.com" email="amitjain231@gmail.com">
