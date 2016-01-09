@@ -1,1 +1,246 @@
-.cl_div_grid_comex,body{margin:0;padding:0}.cl_div_grid_comex,.cl_div_grid_symbol{background-color:#FCFCB8;border-radius:5px}.cl_td_data,.cl_td_label{border-bottom:1px solid gray}h4{text-align:center}.cl_pg_div_header_top{text-align:center;background:-moz-linear-gradient(135deg,rgba(250,250,200,1) 0,rgba(250,250,40,1) 100%);background:-webkit-gradient(left top,right bottom,color-stop(0,rgba(250,250,200,1)),color-stop(100%,rgba(250,250,40,1)));background:-webkit-linear-gradient(135deg,rgba(250,250,200,1) 0,rgba(250,250,40,1) 100%);background:-o-linear-gradient(135deg,rgba(250,250,200,1) 0,rgba(250,250,40,1) 100%);background:-ms-linear-gradient(135deg,rgba(250,250,200,1) 0,rgba(250,250,40,1) 100%);background:linear-gradient(135deg,rgba(200,0,0,1) 0,rgba(15,15,15,1) 100%);border:0}.cl_div_content{background-color:#000}.cl_div_grid_wrapper{width:100%}.cl_div_grid_comex{display:block}.cl_td_comex_data{text-align:center;padding:10px 0;border:2px solid gray}.cl_td_comex_data span{text-align:center;padding:10px 0;color:#000;font-family:arial;font-size:4vh;font-weight:400}.cl_div_grid_symbol{display:block;padding:0;margin:0}.cl_td_symbol_label{text-align:center;padding:10px 0;color:#000;font-family:sans-serif;font-size:14pt;font-weight:400;background:-moz-linear-gradient(135deg,rgba(250,250,200,1) 0,rgba(250,250,40,1) 100%);background:-webkit-gradient(left top,right bottom,color-stop(0,rgba(250,250,200,1)),color-stop(100%,rgba(250,250,40,1)));background:-webkit-linear-gradient(135deg,rgba(250,250,200,1) 0,rgba(250,250,40,1) 100%);background:-o-linear-gradient(135deg,rgba(250,250,200,1) 0,rgba(250,250,40,1) 100%);background:-ms-linear-gradient(135deg,rgba(250,250,200,1) 0,rgba(250,250,40,1) 100%);background:linear-gradient(135deg,rgba(250,140,20,1) 0,rgba(255,235,15,1) 100%)}.cl_td_symbol_label2{text-align:center;color:#000;font-family:sans-serif;font-size:3vh;font-weight:400}.cl_td_symbol_data{text-align:center;padding:2vh 0}.cl_td_symbol_data span{text-align:center;color:#000;font-family:arial;font-size:3.5vh;font-weight:400}.cl_div_grid_rates{display:block;background-color:#000}.cl_td_grid{background-color:#262222;padding-left:5px;border-radius:5px}.cl_stream_off{height:200px;width:100%;padding:5px 0 0 10px;font-family:arial;font-size:10pt}.cl_td_data,.cl_td_label{height:38px;padding:10px 0}.cl_td_label{font-family:Arial,Helvetica,sans-serif;font-size:12pt;font-weight:700}.cl_td_label_2{font-size:8pt;font-weight:700;color:orange}.cl_td_data{font-family:Helvetica,Arial,sans-serif;font-size:16pt;font-weight:400;text-align:center}.cl_divPoweredBy{margin-top:10px;text-align:center;font-family:arial,verdana,sans-serif;font-size:10pt;font-weight:700}.cl_pg_div_outer_marquee{background:-moz-linear-gradient(135deg,rgba(250,250,200,1) 0,rgba(250,250,40,1) 100%);background:-webkit-gradient(left top,right bottom,color-stop(0,rgba(250,250,200,1)),color-stop(100%,rgba(250,250,40,1)));background:-webkit-linear-gradient(135deg,rgba(250,250,200,1) 0,rgba(250,250,40,1) 100%);background:-o-linear-gradient(135deg,rgba(250,250,200,1) 0,rgba(250,250,40,1) 100%);background:-ms-linear-gradient(135deg,rgba(250,250,200,1) 0,rgba(250,250,40,1) 100%);background:linear-gradient(135deg,rgba(200,0,0,1) 0,rgba(15,15,15,1) 100%);margin-top:10px}.cl_pg_marq_scrollMsg{padding:5px 0;font-family:arial;font-size:10pt;font-weight:400}.cl_pg_span_contact1,.cl_pg_span_contact2,.cl_pg_span_contact_label{font-family:sans-serif;font-size:12pt}.cl_pg_span_contact_label{font-weight:700}.cl_pg_span_contact1{color:#64FF5E}.cl_pg_span_contact2{color:#FFEA4A}.cl_pg_div_booking{padding:0}.cl_pg_tbl_booking{border:0;width:100%;border-collapse:collapse}.cl_pg_tbl_booking tr td{text-align:center;vertical-align:middle}
+body
+{
+	padding: 0px;
+	margin: 0px;
+	background-color: #000000;
+}
+h4
+{
+	text-align: center;	
+}
+
+.cl_pg_div_header_top
+{
+	text-align: center;
+	background-color: rgba(200,10,60,1);
+	/*
+	background: -moz-linear-gradient(135deg, rgba(250,250,200,1) 0%, rgba(250,250,40,1) 100%);
+	background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(250,250,200,1)), color-stop(100%, rgba(250,250,40,1)));
+	background: -webkit-linear-gradient(135deg, rgba(250,250,200,1) 0%, rgba(250,250,40,1) 100%);
+	background: -o-linear-gradient(135deg, rgba(250,250,200,1) 0%, rgba(250,250,40,1) 100%);
+	background: -ms-linear-gradient(135deg, rgba(250,250,200,1) 0%, rgba(250,250,40,1) 100%); 
+	background: linear-gradient(135deg, rgba(200,0,0,1) 0%, rgba(15,15,15,1) 100%);
+	*/
+	border: 0px;
+}
+
+.cl_div_content
+{
+	background-color: #000000;
+}
+
+.cl_div_grid_wrapper
+{
+	width: 100%;
+}
+
+.cl_div_grid_comex
+{
+	display: block;
+	border-radius: 5px;
+	background-color: #FCFCB8;
+	padding: 0px;
+	margin:0px;
+}
+
+.cl_td_comex_label
+{
+	
+}
+
+.cl_td_comex_data
+{
+	text-align:center;
+	padding: 10px 0px;
+	border: 2px solid gray;
+	
+}
+
+.cl_td_comex_data span
+{
+	text-align:center;
+	padding: 10px 0px;
+	color: black;
+	font-family: arial;
+	font-size: 4vh;
+	font-weight: normal;
+}
+
+.cl_div_grid_symbol
+{
+	display: block;
+	border-radius: 5px;
+	background-color: #FCFCB8;
+	padding: 0px;
+	margin:0px;
+}
+
+.cl_td_symbol_label
+{
+	text-align:center;
+	padding: 10px 0px;
+	color: black;
+	font-family: sans-serif;
+	font-size: 14pt;
+	font-weight: normal;	
+	background-color: rgba(250,140,20,1);
+	/*
+	background: -moz-linear-gradient(135deg, rgba(250,250,200,1) 0%, rgba(250,250,40,1) 100%);
+	background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(250,250,200,1)), color-stop(100%, rgba(250,250,40,1)));
+	background: -webkit-linear-gradient(135deg, rgba(250,250,200,1) 0%, rgba(250,250,40,1) 100%);
+	background: -o-linear-gradient(135deg, rgba(250,250,200,1) 0%, rgba(250,250,40,1) 100%);
+	background: -ms-linear-gradient(135deg, rgba(250,250,200,1) 0%, rgba(250,250,40,1) 100%); 
+	background: linear-gradient(135deg, rgba(250,140,20,1) 0%, rgba(255,235,15,1) 100%);
+	*/
+}
+
+.cl_td_symbol_label2
+{
+	text-align:center;
+	color: black;
+	font-family: sans-serif;
+	font-size: 3vh;
+	font-weight: normal;		
+	
+}
+
+
+.cl_td_symbol_data
+{
+	text-align:center;
+	padding: 2vh 0px;
+	
+}
+
+.cl_td_symbol_data span
+{
+	text-align:center;
+	color: black;
+	font-family: arial;
+	font-size: 3.5vh;
+	font-weight: normal;
+	
+}
+
+.cl_div_grid_rates
+{
+	display: block;
+	background-color: black;
+}
+
+
+.cl_td_grid
+{
+	background-color: #262222;
+	padding-left:5px;
+	border-radius:5px;
+}
+
+.cl_stream_off			/*  Used for Data streaming off message */
+{
+	height:200px;
+	width:100%;
+	padding:5px 0px 0px 10px;
+	font-family: arial;
+	font-size:10pt;
+}
+
+
+.cl_td_label
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	padding:10px 0px 10px 0px;
+	border-bottom:1px solid gray;
+	height:38px;
+}
+
+.cl_td_label_2
+{
+	font-size: 8pt;
+	font-weight:bold;
+	color: orange;
+}
+
+.cl_td_data
+{
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 16pt;
+	font-weight: normal;
+	text-align: center;
+	padding:10px 0px 10px 0px;
+	height:38px;
+	border-bottom:1px solid gray; 
+}
+
+.cl_divPoweredBy
+{
+	margin-top: 10px;
+	text-align: center;
+	font-family: arial,verdana,sans-serif;
+	font-size: 10pt;
+	font-weight: bold;	
+}
+
+.cl_pg_div_outer_marquee
+{
+	background-color: rgba(200,10,40,1);
+	/*
+	background: -moz-linear-gradient(135deg, rgba(250,250,200,1) 0%, rgba(250,250,40,1) 100%);
+	background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(250,250,200,1)), color-stop(100%, rgba(250,250,40,1)));
+	background: -webkit-linear-gradient(135deg, rgba(250,250,200,1) 0%, rgba(250,250,40,1) 100%);
+	background: -o-linear-gradient(135deg, rgba(250,250,200,1) 0%, rgba(250,250,40,1) 100%);
+	background: -ms-linear-gradient(135deg, rgba(250,250,200,1) 0%, rgba(250,250,40,1) 100%); 
+	background: linear-gradient(135deg, rgba(200,0,0,1) 0%, rgba(15,15,15,1) 100%);
+	*/
+	margin-top: 10px ;
+	
+}
+.cl_pg_marq_scrollMsg
+{
+	padding: 5px 0px; 
+	font-family: arial;
+	font-size: 10pt;
+	font-weight: normal;
+
+}
+
+.cl_pg_span_contact_label
+{
+	font-family: sans-serif;	
+	font-weight: bold;
+	font-size: 12pt;
+}
+
+.cl_pg_span_contact1
+{
+	font-family: sans-serif;
+	font-size: 12pt;
+	color: #64FF5E;
+}
+
+.cl_pg_span_contact2
+{
+	font-family: sans-serif;
+	font-size: 12pt;	
+	color: #FFEA4A;
+}
+
+.cl_pg_div_booking
+{
+	padding: 0px;
+}
+
+.cl_pg_tbl_booking
+{
+	border: 0px;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.cl_pg_tbl_booking tr td
+{
+	text-align: center;
+	vertical-align: middle;
+}
