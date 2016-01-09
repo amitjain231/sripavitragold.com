@@ -21,7 +21,7 @@
 	
 	
 	<!-- Custom JS and css -->
-	<link rel="stylesheet" href="css/pgGetMobileRates.css?ts=20160109142020" />
+	<link rel="stylesheet" href="css/pgGetMobileRates.css?ts=20160109191919" />
 	<link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
 	
@@ -113,48 +113,62 @@
 					<!--<div class='ui-block-b cl_td_symbol_label' style="display:none;" >Buy</div>	-->
 					<div class='ui-block-b cl_td_symbol_label' >Sell Rate</div>
 						
-					<div class='ui-block-a cl_td_symbol_data cl_div_symbol_g999r  cl_td_symbol_label2'>Gold <span style="font-size: 7pt;">(RTGS)</span></div>	
+					<div class='ui-block-a cl_td_symbol_data cl_div_symbol_g999r  cl_td_symbol_label2'>
+						Gold <span class="cl_td_symbol_label3">(RTGS)</span>
+					</div>	
+
 					<!-- <div class='ui-block-b cl_td_symbol_data cl_div_symbol_g999r cl_div_bk_sym_g999r_bid'  style="display:none;"> 
 						<span id="id_span_data_symbol_g999r_bid"></span>
 					</div>		-->
+
 					<div class='ui-block-b cl_td_symbol_data cl_div_symbol_g999r  cl_div_bk_sym_g999r_ask'>
 						<img src="images/flag_ind.png" /> &nbsp;
-						<span id="id_span_data_symbol_g999r_ask"></span>
+						<span class="cl_span_rate_data_ask" id="id_span_data_symbol_g999r_ask"></span>
 					</div>
 					
-					<div class='ui-block-a cl_td_symbol_data cl_div_symbol_g999t  cl_td_symbol_label2'>Gold <span style="font-size: 7pt;">(TCS)</span></div>	
+					<div class='ui-block-a cl_td_symbol_data cl_div_symbol_g999t  cl_td_symbol_label2'>
+						Gold <span class="cl_td_symbol_label3">(TCS)</span>
+					</div>	
 					<!-- <div class='ui-block-b cl_td_symbol_data cl_div_symbol_g999t'  style="display:none;"> <span id="id_span_data_symbol_g999t_bid"></span></div>		-->
 					<div class='ui-block-b cl_td_symbol_data cl_div_symbol_g999t'>
 						<img src="images/flag_ind.png" /> &nbsp;
-						<span id="id_span_data_symbol_g999t_ask"></span>
+						<span class="cl_span_rate_data_ask" id="id_span_data_symbol_g999t_ask"></span>
 					</div>
 					
-					<div class='ui-block-a cl_td_symbol_data cl_div_symbol_gft999r  cl_td_symbol_label2'>Gold FT <span style="font-size: 7pt;">(RTGS)</span></div>	
+					<div class='ui-block-a cl_td_symbol_data cl_div_symbol_gft999r  cl_td_symbol_label2'>
+						Gold FT <span class="cl_td_symbol_label3">(RTGS)</span>
+					</div>	
 					<!-- <div class='ui-block-b cl_td_symbol_data cl_div_symbol_gft999r'  style="display:none;"> <span id="id_span_data_symbol_gft999r_bid"></span></div>		-->
 					<div class='ui-block-b cl_td_symbol_data cl_div_symbol_gft999r'>
 						<img src="images/flag_ind.png" /> &nbsp;
-						<span id="id_span_data_symbol_gft999r_ask"></span>
+						<span class="cl_span_rate_data_ask" id="id_span_data_symbol_gft999r_ask"></span>
 					</div>
 					
-					<div class='ui-block-a cl_td_symbol_data cl_div_symbol_gft999t  cl_td_symbol_label2'>Gold FT <span style="font-size: 7pt;">(TCS)</span></div>	
+					<div class='ui-block-a cl_td_symbol_data cl_div_symbol_gft999t  cl_td_symbol_label2'>
+						Gold FT <span class="cl_td_symbol_label3">(TCS)</span>
+					</div>	
 					<!-- <div class='ui-block-b cl_td_symbol_data cl_div_symbol_gft999t'  style="display:none;"> <span id="id_span_data_symbol_gft999t_bid"></span></div>		-->
 					<div class='ui-block-b cl_td_symbol_data cl_div_symbol_gft999t'>
 						<img src="images/flag_ind.png" /> &nbsp;
-						<span id="id_span_data_symbol_gft999t_ask"></span>
+						<span class="cl_span_rate_data_ask" id="id_span_data_symbol_gft999t_ask"></span>
 					</div>
 					
-					<div class='ui-block-a cl_td_symbol_data cl_div_symbol_s999r  cl_td_symbol_label2'>Silver <span style="font-size: 7pt;">(RTGS)</span></div>	
+					<div class='ui-block-a cl_td_symbol_data cl_div_symbol_s999r  cl_td_symbol_label2'>
+						Silver <span class="cl_td_symbol_label3">(RTGS)</span>
+					</div>	
 					<!-- <div class='ui-block-b cl_td_symbol_data cl_div_symbol_s999r'  style="display:none;"> <span id="id_span_data_symbol_s999r_bid"></span></div>		-->
 					<div class='ui-block-b cl_td_symbol_data cl_div_symbol_s999r'>
 						<img src="images/flag_ind.png" />  &nbsp;&nbsp;&nbsp;&nbsp;
-						<span id="id_span_data_symbol_s999r_ask"></span>
+						<span class="cl_span_rate_data_ask" id="id_span_data_symbol_s999r_ask"></span>
 					</div>
 					
-					<div class='ui-block-a cl_td_symbol_data cl_div_symbol_s999t  cl_td_symbol_label2'>Silver <span style="font-size: 7pt;">(TCS)</span></div>	
+					<div class='ui-block-a cl_td_symbol_data cl_div_symbol_s999t  cl_td_symbol_label2'>
+						Silver <span class="cl_td_symbol_label3">(TCS)</span>
+					</div>	
 					<!-- <div class='ui-block-b cl_td_symbol_data cl_div_symbol_s999t'  style="display:none;">  <span id="id_span_data_symbol_s999t_bid"></span></div>		-->
 					<div class='ui-block-b cl_td_symbol_data cl_div_symbol_s999t'>
 						<img src="images/flag_ind.png" /> &nbsp;&nbsp;&nbsp;&nbsp;
-						<span id="id_span_data_symbol_s999t_ask"></span>
+						<span class="cl_span_rate_data_ask" id="id_span_data_symbol_s999t_ask"></span>
 					</div>
 					
 				</div>
