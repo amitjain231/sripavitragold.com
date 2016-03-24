@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html> 
 <head> 
-	<title>Vasavi Gold</title> 
+	<title>Sri Pavitra Gold Bullion</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	
@@ -11,8 +11,9 @@
 	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
 	<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" />
 	<link rel="stylesheet" href="css/jquery.mobile.theme-1.4.5.min.css" />
-	<link rel="shortcut icon" 	type="image/x-icon" href="images/favicon.ico" >
-	<link rel="icon" 					type="image/x-icon" href="images/favicon.ico" >
+	<link rel="shortcut icon" 	type="image/x-icon" href="/favicon.ico" >
+	
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
 	
 	
 	<script src="js/jquery-2.1.4.min.js"></script>
@@ -20,35 +21,35 @@
 	
 	
 	<!-- Custom JS and css -->
-	<link rel="stylesheet" href="css/vgPGGetMobileRates.css?ts=20151118151899" />
+	<link rel="stylesheet" href="css/pgGetMobileRates.css?ts=20160117191920" />
+	<link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+	
 	<!-- <link rel='stylesheet' type='text/css' href='css/rupee.css'></link> -->
-	<script src="./js/vgPGGetMobileRates.js?ts=20151118151515"></script>
+	<script src="./js/pgGetMobileRates.js?ts=20160117191920"></script>
 
 	
 </head> 
 
-<body onload="initVGMobileApp();">
-	<input type="hidden" id="id_vg_hid_mob_param1" 		value="0" />
-	<input type="hidden" id="id_vg_hid_mob_param2" 		value="0" />
-	<input type="hidden" id="id_vg_hid_mob_param3" 		value="0" />
-	<input type="hidden" id="id_vg_hid_mob_param4" 		value="0" />
-	<input type="hidden" id="id_vg_hid_mob_param5" 		value="0" />
-	<input type="hidden" id="id_vg_hid_mob_param6" 		value="0" />
-	<input type="hidden" id="id_vg_hid_mob_param7" 		value="0" />
-	<input type="hidden" id="id_vg_hid_mob_param8" 		value="0" />
-	<input type="hidden" id="id_vg_hid_mob_param9" 		value="0" />
-	<input type="hidden" id="id_vg_hid_mob_param10" 		value="0" />
+<body onload="initPGMobileApp();">
+	<input type="hidden" id="id_pg_hid_mob_param1" 		value="0" />
+	<input type="hidden" id="id_pg_hid_mob_param2" 		value="0" />
+	<input type="hidden" id="id_pg_hid_mob_param3" 		value="0" />
+	<input type="hidden" id="id_pg_hid_mob_param4" 		value="0" />
+	<input type="hidden" id="id_pg_hid_mob_param5" 		value="0" />
+	<input type="hidden" id="id_pg_hid_mob_param6" 		value="0" />
+	<input type="hidden" id="id_pg_hid_mob_param7" 		value="0" />
+	<input type="hidden" id="id_pg_hid_mob_param8" 		value="0" />
+	<input type="hidden" id="id_pg_hid_mob_param9" 		value="0" />
+	<input type="hidden" id="id_pg_hid_mob_param10" 		value="0" />
 	
 	
 <div data-role="page" id="mainpage" data-theme="b"   class="cl_div_content">
 
 
-	<div data-role="header" data-theme="a" style='background-color:#F7F763; height: 30px;'>
-		<div style="text-align:center;">
-			
-			<img  src="images/vg_logo_mobile.jpg"   />
-			
-		</div>
+	<div data-role="header" data-theme="a" class="cl_pg_div_header_top">
+		<img src="images/GoldGlobe.png" />  &nbsp;
+		<img src="images/SriPavitraGold_logo.png" />
 	</div>
 	
 	
@@ -56,9 +57,37 @@
 		
 		<div class="ui-grid-a cl_div_grid_wrapper" id="id_div_grid_wrapper">
 				<!-- Default it to No Steaming -->
-				<!-- <div class='cl_stream_off' > <span style='color:#E35E1B'>oops!!! </span>  No Data Connection... </div> -->
+				<div class='cl_stream_off' > <span style='color:#ffff66'>oops!!! &nbsp;&nbsp;&nbsp;</span>No Data Connection... </div>
 			
 				<div class="ui-grid-b cl_div_grid_comex" id="id_div_grid_comex">
+					
+					<!-- Current hidden start -->
+					<div class='ui-block-a cl_td_comex_data cl_div_symbol_xauusd_bid cl_div_bk_sym_xauusd_bid' style="display:none;">
+						<span id="id_span_data_comex_g_bid"></span>
+					</div>
+					<div class='ui-block-b cl_td_comex_data  cl_div_symbol_xagusd_bid cl_div_bk_sym_xagusd_bid' style="display:none;" >
+						<span id="id_span_data_comex_s_bid"></span>
+					</div>
+					<div class='ui-block-c cl_td_comex_data cl_div_symbol_usdinr_bid cl_div_bk_sym_usdinr_bid' style="display:none;" >
+						<span id="id_span_data_comex_u_bid"></span>					
+					</div>
+					<!-- Current hidden end -->
+					
+					
+					<div class='ui-block-a cl_td_comex_data cl_div_symbol_xauusd_ask cl_div_bk_sym_xauusd_ask' >
+						<img src="images/flag_usa.png" /> <br>
+						<span id="id_span_data_comex_g_ask"></span>
+					</div>
+					<div class='ui-block-b cl_td_comex_data cl_div_symbol_xagusd_ask cl_div_bk_sym_xagusd_ask' >
+						<img src="images/flag_usa.png" /> <br>
+						<span id="id_span_data_comex_s_ask"></span>
+					</div>	
+					<div class='ui-block-c cl_td_comex_data cl_div_symbol_usdinr_ask cl_div_bk_sym_usdinr_ask' >
+						<img src="images/flag_ind.png" /> <br>
+						<span id="id_span_data_comex_u_ask"></span>
+					</div>	
+					
+					<!--
 					<div class='ui-block-a cl_td_comex_label' >COMEX</div>	
 					<div class='ui-block-b cl_td_comex_label' >BID</div>	
 					<div class='ui-block-c cl_td_comex_label' >ASK</div>	
@@ -74,266 +103,108 @@
 					<div class='ui-block-a cl_td_comex_data cl_div_comex_usdinr cl_td_comex_label2'>USDINR </div>	
 					<div class='ui-block-b cl_td_comex_data cl_div_comex_usdinr'> <span id="id_span_data_comex_u_bid"></span></div>	
 					<div class='ui-block-c cl_td_comex_data cl_div_comex_usdinr'><span id="id_span_data_comex_u_ask"></span></div>
+					-->
 				</div>
+				
+				
 				<br/>
-				<div class="ui-grid-b cl_div_grid_symbol" id="id_div_grid_symbol">
-					<div class='ui-block-a cl_td_symbol_label' >SYMBOL</div>	
-					<div class='ui-block-b cl_td_symbol_label' >We Buy</div>	
-					<div class='ui-block-c cl_td_symbol_label' >We Sell</div>
+				<div class="ui-grid-a cl_div_grid_symbol" id="id_div_grid_symbol">
+					<div class='ui-block-a cl_td_symbol_label' >Symbol</div>	
+					<!--<div class='ui-block-b cl_td_symbol_label' style="display:none;" >Buy</div>	-->
+					<div class='ui-block-b cl_td_symbol_label' >Sell Rate</div>
 						
-					<div class='ui-block-a cl_td_symbol_data cl_div_symbol_g999r  cl_td_symbol_label2'>Gold (RTGS)</div>	
-					<div class='ui-block-b cl_td_symbol_data cl_div_symbol_g999r'> <span id="id_span_data_symbol_g999r_bid"></span></div>	
-					<div class='ui-block-c cl_td_symbol_data cl_div_symbol_g999r'><span style="font-size:13pt;" id="id_span_data_symbol_g999r_ask"></span></div>
+					<div class='ui-block-a cl_td_symbol_data cl_div_symbol_g999r  cl_td_symbol_label2'>
+						Gold <span class="cl_td_symbol_label3">(RTGS)</span>
+					</div>	
+
+					<!-- <div class='ui-block-b cl_td_symbol_data cl_div_symbol_g999r cl_div_bk_sym_g999r_bid'  style="display:none;"> 
+						<span id="id_span_data_symbol_g999r_bid"></span>
+					</div>		-->
+
+					<div class='ui-block-b cl_td_symbol_data cl_div_symbol_g999r  cl_div_bk_sym_g999r_ask'>
+						<img src="images/flag_ind.png" /> &nbsp;
+						<span class="cl_span_rate_data_ask" id="id_span_data_symbol_g999r_ask"></span>
+					</div>
 					
-					<div class='ui-block-a cl_td_symbol_data cl_div_symbol_g999t  cl_td_symbol_label2'>Gold (TCS)</div>	
-					<div class='ui-block-b cl_td_symbol_data cl_div_symbol_g999t'> <span id="id_span_data_symbol_g999t_bid"></span></div>	
-					<div class='ui-block-c cl_td_symbol_data cl_div_symbol_g999t'><span style="font-size:13pt;" id="id_span_data_symbol_g999t_ask"></span></div>
+					<div class='ui-block-a cl_td_symbol_data cl_div_symbol_g999t  cl_td_symbol_label2'>
+						Gold <span class="cl_td_symbol_label3">(TCS)</span>
+					</div>	
+					<!-- <div class='ui-block-b cl_td_symbol_data cl_div_symbol_g999t'  style="display:none;"> <span id="id_span_data_symbol_g999t_bid"></span></div>		-->
+					<div class='ui-block-b cl_td_symbol_data cl_div_symbol_g999t cl_div_bk_sym_g999t_ask'>
+						<img src="images/flag_ind.png" /> &nbsp;
+						<span class="cl_span_rate_data_ask" id="id_span_data_symbol_g999t_ask"></span>
+					</div>
 					
-					<div class='ui-block-a cl_td_symbol_data cl_div_symbol_gft999r  cl_td_symbol_label2'>Gold FT(RTGS)</div>	
-					<div class='ui-block-b cl_td_symbol_data cl_div_symbol_gft999r'> <span id="id_span_data_symbol_gft999r_bid"></span></div>	
-					<div class='ui-block-c cl_td_symbol_data cl_div_symbol_gft999r'><span style="font-size:13pt;"  id="id_span_data_symbol_gft999r_ask"></span></div>
+					<div class='ui-block-a cl_td_symbol_data cl_div_symbol_gft999r  cl_td_symbol_label2'>
+						Gold FT <span class="cl_td_symbol_label3">(RTGS)</span>
+					</div>	
+					<!-- <div class='ui-block-b cl_td_symbol_data cl_div_symbol_gft999r'  style="display:none;"> <span id="id_span_data_symbol_gft999r_bid"></span></div>		-->
+					<div class='ui-block-b cl_td_symbol_data cl_div_symbol_gft999r  cl_div_bk_sym_gft999r_ask'>
+						<img src="images/flag_ind.png" /> &nbsp;
+						<span class="cl_span_rate_data_ask" id="id_span_data_symbol_gft999r_ask"></span>
+					</div>
 					
-					<div class='ui-block-a cl_td_symbol_data cl_div_symbol_gft999t  cl_td_symbol_label2'>Gold FT(TCS)</div>	
-					<div class='ui-block-b cl_td_symbol_data cl_div_symbol_gft999t'> <span id="id_span_data_symbol_gft999t_bid"></span></div>	
-					<div class='ui-block-c cl_td_symbol_data cl_div_symbol_gft999t'><span style="font-size:13pt;"  id="id_span_data_symbol_gft999t_ask"></span></div>
+					<div class='ui-block-a cl_td_symbol_data cl_div_symbol_gft999t  cl_td_symbol_label2'>
+						Gold FT <span class="cl_td_symbol_label3">(TCS)</span>
+					</div>	
+					<!-- <div class='ui-block-b cl_td_symbol_data cl_div_symbol_gft999t'  style="display:none;"> <span id="id_span_data_symbol_gft999t_bid"></span></div>		-->
+					<div class='ui-block-b cl_td_symbol_data cl_div_symbol_gft999t cl_div_bk_sym_gft999t_ask'>
+						<img src="images/flag_ind.png" /> &nbsp;
+						<span class="cl_span_rate_data_ask" id="id_span_data_symbol_gft999t_ask"></span>
+					</div>
 					
-					<div class='ui-block-a cl_td_symbol_data cl_div_symbol_s999r  cl_td_symbol_label2'>Silver (RTGS)</div>	
-					<div class='ui-block-b cl_td_symbol_data cl_div_symbol_s999r'> <span id="id_span_data_symbol_s999r_bid"></span></div>	
-					<div class='ui-block-c cl_td_symbol_data cl_div_symbol_s999r'><span style="font-size:13pt;"  id="id_span_data_symbol_s999r_ask"></span></div>
+					<div class='ui-block-a cl_td_symbol_data cl_div_symbol_s999r  cl_td_symbol_label2'>
+						Silver <span class="cl_td_symbol_label3">(RTGS)</span>
+					</div>	
+					<!-- <div class='ui-block-b cl_td_symbol_data cl_div_symbol_s999r'  style="display:none;"> <span id="id_span_data_symbol_s999r_bid"></span></div>		-->
+					<div class='ui-block-b cl_td_symbol_data cl_div_symbol_s999r cl_div_bk_sym_s999r_ask'>
+						<img src="images/flag_ind.png" />  &nbsp;&nbsp;&nbsp;&nbsp;
+						<span class="cl_span_rate_data_ask" id="id_span_data_symbol_s999r_ask"></span>
+					</div>
 					
-					<div class='ui-block-a cl_td_symbol_data cl_div_symbol_s999t  cl_td_symbol_label2'>Silver (TCS)</div>	
-					<div class='ui-block-b cl_td_symbol_data cl_div_symbol_s999t'> <span id="id_span_data_symbol_s999t_bid"></span></div>	
-					<div class='ui-block-c cl_td_symbol_data cl_div_symbol_s999t'><span style="font-size:13pt;"  id="id_span_data_symbol_s999t_ask"></span></div>
+					<div class='ui-block-a cl_td_symbol_data cl_div_symbol_s999t  cl_td_symbol_label2'>
+						Silver <span class="cl_td_symbol_label3">(TCS)</span>
+					</div>	
+					<!-- <div class='ui-block-b cl_td_symbol_data cl_div_symbol_s999t'  style="display:none;">  <span id="id_span_data_symbol_s999t_bid"></span></div>		-->
+					<div class='ui-block-b cl_td_symbol_data cl_div_symbol_s999t cl_div_bk_sym_s999t_ask'>
+						<img src="images/flag_ind.png" /> &nbsp;&nbsp;&nbsp;&nbsp;
+						<span class="cl_span_rate_data_ask" id="id_span_data_symbol_s999t_ask"></span>
+					</div>
 					
 				</div>
 				
 				
 		</div>
 
-		<div class="cl_vg_div_outer_marquee">	
+		<div class="cl_pg_div_outer_marquee">	
 			<marquee
 				direction=left
 				scrolldelay="150"  
 				onmouseover="this.stop();" 
 				onmouseout="this.start();" 
-				class="cl_vg_marq_scrollMsg"
-				id="id_vg_scroll_marq" >
+				class="cl_pg_marq_scrollMsg"
+				id="id_pg_scroll_marq" >
 				
-				Contact: <span class="cl_vg_span_contact1"> +91 8812 230997 </span> /  
-						 <span class="cl_vg_span_contact2">+91 9247023997 </span> / 
-						 <span class="cl_vg_span_contact3">+91 9491723997 </span>
-				
+				<span class="cl_pg_span_contact_label">Booking: </span>
+				<span class="cl_pg_span_contact1"> +91 866 6006662 </span> 
+				<span style="font-size:13pt;">/</span>
+				<span class="cl_pg_span_contact2">+91 9246849119 </span> 
+				&nbsp;&nbsp;&nbsp;
+				<span class="cl_pg_span_contact_label">BackOffice: </span>
+				<span class="cl_pg_span_contact1"> +91 866 2578588 </span>
+				<span style="font-size:13pt;">/</span>
+				<span class="cl_pg_span_contact2">+91 9494323279 </span>
 						
 			</marquee>
 		</div>
 		
 		
-	   
    
 	</div><!-- /content -->
 
 	
-	<!-- Footer -->
-	<div data-role="footer" data-position="fixed" data-iconpos="bottom">
-		<div data-role="navbar" class="custom-navbar">
-			<ul>
-				<li><a id="id_a_booking" href="#" data-icon="phone" 
-					data-position-to="window" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all " >Booking</a></li>
-				<li><a id="id_a_contact" href="#" data-icon="user" 
-					data-position-to="window" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all " >Contact</a></li>
-				<li><a id="id_a_rtgs" href="#" data-icon="location" 
-					data-position-to="window" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all " >RTGS</a></li>
-			</ul>
-		</div>
-		
-			
-		<div data-role="popup" id="myPopupBooking" class="ui-content" 
-			data-overlay-theme="b" style="background-color: #022E7A;">
-			
-			  <a href="#" data-rel="back" data-role="button"  data-theme="b" 
-				data-icon="delete" data-iconpos="notext" class="ui-btn-right">&nbsp;</a>
-				
-				<p style="color:black; background-color: #33CCFF;padding: 10px;">Booking Contact <span style="font-size: 8pt;color:blue;"> (Click to Call)</span> </p>
-				<table>
-					<tr>
-						<td> 
-							<a href="#" data-role="button" data-icon="phone" data-iconpos="notext">&nbsp;</a>					
-						</td>
-						
-						<td> &nbsp;&nbsp;08812230997</td>
-					</tr>
-					
-					<tr>
-						<td> 
-							<a href="#" data-role="button" data-icon="phone" data-iconpos="notext">&nbsp;</a>					
-						</td>
-					
-					
-						<td> &nbsp;&nbsp;9247023997</td>
-					</tr>	
-					
-					<tr>
-						<td> 
-							<a href="#" data-role="button" data-icon="user" data-iconpos="notext">&nbsp;</a>					
-						</td>
-							
-						<td> <span style="font-size: 10pt;color:yellow;">(Mouli)</span> 9491723997</td>
-					</tr>	
-					<tr>
-						<td> 
-							<a href="#" data-role="button" data-icon="user" data-iconpos="notext">&nbsp;</a>					
-						</td>
-							
-						<td> <span style="font-size: 10pt;color:yellow;">(Sai Krishna)</span> 9030023997</td>
-					</tr>		
-				
-				
-				</table>
-		  
-		</div> <!--   myPopupBooking   -->
-		
-		<div data-role="popup" id="myPopupContact" class="ui-content" 
-			data-overlay-theme="b" style="background-color: #E66510;">
-			
-			  <a href="#" data-rel="back" data-role="button"  data-theme="b" 
-				data-icon="delete" data-iconpos="notext" class="ui-btn-right">&nbsp;</a>
-		
-				<table>
-					<tr>
-						<td > 
-							<img src="images/icon_hq.png" />
-							
-						</td>
-						<td vertical-align='middle'>
-							<span style="font-size: 14pt; font-weight: bold; vertical-align:middle;">Head Quarter</span></td>
-						
-					</tr>
-					<tr>
-						<td colspan=2 style="color:black; font-size: 12pt;font-family: sans-serif;"> Vasavi Gold and Checking Center</td>						
-					</tr>
-					<tr>
-						<td colspan=2 style="color:yellow; font-size: 10pt;font-family: sans-serif;"> Main Bazaar, Paidichintapadu</td>						
-					</tr>
-					<tr>
-						<td colspan=2 style="color:yellow; font-size: 10pt;font-family: sans-serif;">Eluru, Andhra Pradesh 534001</td>
-					</tr>
-					
-				
-				</table>
-				
-				<img src="images/divider01.png" />
-				
-				
-				<table>
-					<tr>
-						<td> 
-							<a href="#" data-role="button" data-icon="mail" data-iconpos="notext">&nbsp;</a>
-						</td>
-						<td> 
-							<span style="color:#33F2E9;font-size: 8pt;"> admin@vasavigold.com</span>
-						</td>
-					</tr>
-					
-				</table>	
-				
-				
-				<div style="width:50vw; height:20vh;border: 0px; margin: 0px auto;" id="id_cu_ifrm_googlemap" >
-					
-				</div>
-				
-		</div> <!--   myPopupContact   -->
-		
-		
-		<div data-role="popup" id="myPopupRTGS" class="ui-content" 
-			data-overlay-theme="b" style="background-color: #0FA807;">
-			
-			  <a href="#" data-rel="back" data-role="button"  data-theme="b" 
-				data-icon="delete" data-iconpos="notext" class="ui-btn-right">&nbsp;</a>
-		
-				<table>
-					<tr>
-						<td> 
-							<img src="images/icon_bank.png" />
-							
-						</td>
-						<td vertical-align='middle'>
-							<span style="font-size: 14pt; font-weight: bold; vertical-align:middle;">Bank Details</span></td>
-						
-					</tr>
-					<tr>
-						<td class="cl_td_banklabel"> Bank:</td>
-						<td class="cl_td_bankdata"> State Bank of India</td>
-					</tr>
-					<tr>
-						<td class="cl_td_banklabel"> Branch:</td>
-						<td class="cl_td_bankdata"> Bazar Branch, Eluru</td>						
-					</tr>
-					<tr>
-						<td class="cl_td_banklabel"> Name:</td>
-						<td class="cl_td_bankdata"> Vasavi Computer Gold checking center</td>
-					</tr>
-					<tr>
-						<td class="cl_td_banklabel"> Account:</td>
-						<td class="cl_td_bankdata"> 32954730911 , 35113390855</td>
-					</tr>
-					<tr>
-						<td class="cl_td_banklabel"> IFSC:</td>
-						<td class="cl_td_bankdata"> SBIN0002715</td>
-					</tr>
-				
-				</table>		
-		</div> <!--   myPopupContact   -->
-		
-		
-		
-	</div>
-	
-
-	
 	
 </div><!-- /page -->
-
-
-
-<div data-role="page" id="popup">
-
-	<div data-role="header" data-theme="e">
-		<h1>Update App</h1>
-	</div><!-- /header -->
-
-	<div data-role="content" data-theme="d">	
-		<p> Dear Customer, Please update latest version of this App from Store to enjoy new features. </p>
-		<p><a href="#mainpage" data-rel="back" data-role="button" data-inline="true" data-icon="arrow-l">Back</a></p>	
-	</div><!-- /content -->
-	
-	<div data-role="footer">
-		<h4>Thank You</h4>
-	</div><!-- /footer -->
-</div><!-- /page popup -->
-
-
-
-<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js"></script>
-<script type="text/javascript">
-	function initialize()
-	{
-		var myLatLng = {lat: 16.707415, lng: 81.109132};
-
-		  var map = new google.maps.Map(document.getElementById('id_cu_ifrm_googlemap'), {
-			zoom: 15,
-			center: myLatLng
-		  });
-
-		  var marker = new google.maps.Marker({
-			position: myLatLng,
-			map: map,
-			title: 'Vasavi Gold'
-		  });	
-		
-	}		
-	google.maps.event.addDomListener(window, 'load', initialize);
-</script>
-
 
 </body>
 </html>
