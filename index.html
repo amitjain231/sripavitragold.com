@@ -21,6 +21,8 @@
 	
 	
 	<!-- Custom JS and css -->
+	
+	<link rel="stylesheet" href="css/rupee.css?ts=20160117191920" />
 	<link rel="stylesheet" href="css/pgGetMobileRates.css?ts=20160117191920" />
 	<link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
@@ -28,6 +30,28 @@
 	<!-- <link rel='stylesheet' type='text/css' href='css/rupee.css'></link> -->
 	<script src="./js/pgGetMobileRates.js?ts=20160117191920"></script>
 
+
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js"></script>
+<script type="text/javascript">
+	function initialize()
+	{
+		var myLatLng = {lat: 16.511627, lng: 80.625892};
+
+		  var map = new google.maps.Map(document.getElementById('id_cu_ifrm_googlemap'), {
+			zoom: 15,
+			center: myLatLng
+		  });
+
+		  var marker = new google.maps.Marker({
+			position: myLatLng,
+			map: map,
+			title: 'Sri Pavitra Gold Bullion'
+		  });	
+		
+	}		
+	google.maps.event.addDomListener(window, 'load', initialize);
+</script>	
+	
 	
 </head> 
 
@@ -74,18 +98,46 @@
 					<!-- Current hidden end -->
 					
 					
-					<div class='ui-block-a cl_td_comex_data cl_div_symbol_xauusd_ask cl_div_bk_sym_xauusd_ask' >
-						<img src="images/flag_usa.png" /> <br>
-						<span id="id_span_data_comex_g_ask"></span>
+					<div class="ui-block-a cl_td_comex_data" >
+						<table class="cl_pg_tbl_comex_data">
+							<tr>
+								<td colspan=2> <img src="images/flag_usa.png" /> </td>
+							</tr>
+							<tr>
+								<td class="cl_pg_td_comex_dollar ">$</td>
+								<td class="cl_pg_td_comex_rate"> <span id="id_span_data_comex_g_ask"></span> </td>
+							</tr>
+						</table>
+						
+						
 					</div>
 					<div class='ui-block-b cl_td_comex_data cl_div_symbol_xagusd_ask cl_div_bk_sym_xagusd_ask' >
-						<img src="images/flag_usa.png" /> <br>
-						<span id="id_span_data_comex_s_ask"></span>
+						<table class="cl_pg_tbl_comex_data">
+							<tr>
+								<td colspan=2> <img src="images/flag_usa.png" /> </td>
+							</tr>
+							<tr>
+								<td class="cl_pg_td_comex_dollar ">$</td>
+								<td class="cl_pg_td_comex_rate"> <span id="id_span_data_comex_s_ask"></span> </td>
+							</tr>
+						</table>
+						
 					</div>	
 					<div class='ui-block-c cl_td_comex_data cl_div_symbol_usdinr_ask cl_div_bk_sym_usdinr_ask' >
-						<img src="images/flag_ind.png" /> <br>
-						<span id="id_span_data_comex_u_ask"></span>
+						<table class="cl_pg_tbl_comex_data">
+							<tr>
+								<td colspan=2> <img src="images/flag_ind.png" /> <br> </td>
+							</tr>
+							<tr>
+								<td class="cl_pg_td_comex_rupee ">Rs.</td>
+								<td class="cl_pg_td_comex_rate"> <span id="id_span_data_comex_u_ask"></span> </td>
+							</tr>
+						</table>
+						
+						 
 					</div>	
+					
+					
 					
 					<!--
 					<div class='ui-block-a cl_td_comex_label' >COMEX</div>	
@@ -107,7 +159,6 @@
 				</div>
 				
 				
-				<br/>
 				<div class="ui-grid-a cl_div_grid_symbol" id="id_div_grid_symbol">
 					<div class='ui-block-a cl_td_symbol_label' >Symbol</div>	
 					<!--<div class='ui-block-b cl_td_symbol_label' style="display:none;" >Buy</div>	-->
@@ -176,6 +227,15 @@
 				
 		</div>
 
+
+		
+		
+   
+	</div><!-- /content -->
+
+	
+	<!-- Footer -->
+	<div data-role="footer" data-position="fixed" data-iconpos="bottom">
 		<div class="cl_pg_div_outer_marquee">	
 			<marquee
 				direction=left
@@ -184,24 +244,247 @@
 				onmouseout="this.start();" 
 				class="cl_pg_marq_scrollMsg"
 				id="id_pg_scroll_marq" >
-				
-				<span class="cl_pg_span_contact_label">Booking: </span>
-				<span class="cl_pg_span_contact1"> +91 866 6006662 </span> 
-				<span style="font-size:13pt;">/</span>
-				<span class="cl_pg_span_contact2">+91 9246849119 </span> 
-				&nbsp;&nbsp;&nbsp;
-				<span class="cl_pg_span_contact_label">BackOffice: </span>
-				<span class="cl_pg_span_contact1"> +91 866 2578588 </span>
-				<span style="font-size:13pt;">/</span>
-				<span class="cl_pg_span_contact2">+91 9494323279 </span>
-						
+					&nbsp;
 			</marquee>
 		</div>
-		
-		
-   
-	</div><!-- /content -->
 
+	<div data-role="navbar" class="custom-navbar">
+			<ul>
+				<li><a id="id_a_pg_booking" href="#" data-icon="phone" 
+					data-position-to="window" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all " >Booking</a></li>
+				<li><a id="id_a_pg_contact" href="#" data-icon="user" 
+					data-position-to="window" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all " >Contact</a></li>
+				<li><a id="id_a_pg_rtgs" href="#" data-icon="location" 
+					data-position-to="window" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all " >RTGS</a></li>
+			</ul>
+		</div>
+		
+		<div style="background-color: #992538;">
+			<div class="ui-grid-a">
+				<div class="ui-block-a cl_pg_div_footer_copyright">
+					Copyright &copy 
+					<script type='text/javascript'>document.write( new Date().getFullYear());</script>
+					by Sri Pavitra Gold Bullion
+				</div>
+				
+				<div class="ui-block-b cl_pg_divPoweredBy">
+					Powered by magicBul
+				</div>
+				
+		</div>
+			
+		<div data-role="popup" id="myPopupBooking" class="ui-content" 
+			data-overlay-theme="b" style="width:80vw; height:80vh; background-color: #5F147A;">
+			
+			  <a href="#" data-rel="back" data-role="button"  data-theme="b" 
+				data-icon="delete" data-iconpos="notext" class="ui-btn-right">&nbsp;</a>
+				
+				<p style="color:black; background-color: #CE47FF;padding: 2vh;">Booking Contact 
+					<span style="font-family: Roboto Slab, arial; font-size: 8pt;color:white;"> (Touch to Call)</span> </p>
+				<table style="margin: 0px;">
+					<tr>
+						<td> 
+							<a href="#" data-role="button" data-icon="phone" data-iconpos="notext">&nbsp;</a>					
+						</td>
+						
+						<td colspan=2> <a href="tel:08666006662">+91 866 6006662</a></td>
+					</tr>
+					
+					<tr>
+						<td> 
+							<a href="#" data-role="button" data-icon="phone" data-iconpos="notext">&nbsp;</a>					
+						</td>
+					
+						<td> <a href="tel:9246849119">+91 9246849119</a></td>
+							
+						
+						<td>
+							<span style="font-size: 10pt;color:yellow;">(Shankar Rao) </span>
+						</td>	
+					
+					</tr>	
+					
+					<tr>
+						<td> 
+							<a href="#" data-role="button" data-icon="user" data-iconpos="notext">&nbsp;</a>					
+						</td>
+							
+						<td> <a href="tel:8106677782">+91 8106677782</a></td>
+					
+						<td>
+							<span style="font-size: 10pt;color:yellow;">(Aditya)</span> 
+						</td>
+					</tr>	
+						
+				</table>
+
+				<p style="color:black; background-color: #CE47FF;padding: 2vh;">Back office 
+				<span style="font-family: Roboto Slab, arial; font-size: 8pt; color:white;"> (Touch to Call)</span> </p>		
+				<table style="margin: 0px;">
+					<tr>
+						<td> 
+							<a href="#" data-role="button" data-icon="phone" data-iconpos="notext">&nbsp;</a>					
+						</td>
+						
+						<td colspan=2> <a href="tel:08662578588">+91 866 2578588</a></td>
+					</tr>
+					
+					<tr>
+						<td> 
+							<a href="#" data-role="button" data-icon="phone" data-iconpos="notext">&nbsp;</a>					
+						</td>
+					
+						<td> <a href="tel:9494323279">+91 9494323279</a></td>
+							
+						
+					</tr>	
+					
+				</table>
+
+
+				</div> <!--   myPopupBooking   -->
+		
+		
+		<div data-role="popup" id="myPopupContact" class="ui-content" 
+			data-overlay-theme="b" style="width:75vw; height: 75vh; background-color: #E66510;">
+			
+			  <a href="#" data-rel="back" data-role="button"  data-theme="b" 
+				data-icon="delete" data-iconpos="notext" class="ui-btn-right">&nbsp;</a>
+		
+				<table>
+					<tr>
+						<td > 
+							<a href="#" data-role="button" data-icon="location" data-iconpos="notext">&nbsp;</a>
+							
+						</td>
+						<td vertical-align='middle'>
+							<span style="font-size: 14pt; font-weight: bold; vertical-align:middle;">Registered Office</span></td>
+						
+					</tr>
+					<tr>
+						<td colspan=2 style="color:black; font-size: 12pt;font-family: sans-serif;"> Sri Pavitra Gold Bullion</td>						
+					</tr>
+					<tr>
+						<td colspan=2 style="color:yellow; font-size: 10pt;font-family: sans-serif;"> 27-14-16, Jaihind Complex, Ground Floor</td>						
+					</tr>
+					<tr>
+						<td colspan=2 style="color:yellow; font-size: 10pt;font-family: sans-serif;"> Rajagopalachari Street, EV Plaza</td>
+					</tr>
+					<tr>
+						<td colspan=2 style="color:yellow; font-size: 10pt;font-family: sans-serif;"> Governorpet, Vijayawada</td>
+					</tr>
+					<tr>
+						<td colspan=2 style="color:yellow; font-size: 10pt;font-family: sans-serif;">Andhra Pradesh 520002, India</td>
+					</tr>
+					
+				
+				</table>
+				
+				<hr />
+				
+				<table>
+					<tr>
+						<td> 
+							<a href="#" data-role="button" data-icon="mail" data-iconpos="notext">&nbsp;</a>
+						</td>
+						<td> 
+							<span style="color:#33F2E9;font-size: 8pt;"> sripavitragold@gmail.com</span>
+						</td>
+					</tr>
+					
+				</table>	
+				
+				
+				<div style="width:50vw; height:20vh;border: 0px; margin: 0px auto;" id="id_cu_ifrm_googlemap" >
+					
+				</div>
+				
+		</div> <!--   myPopupContact   -->
+		
+		
+		<div data-role="popup" id="myPopupRTGS" class="ui-content" 
+			data-overlay-theme="b" style="width:80vw; height:80vh; background-color: #8A1686;">
+			
+			  <a href="#" data-rel="back" data-role="button"  data-theme="b" 
+				data-icon="delete" data-iconpos="notext" class="ui-btn-right">&nbsp;</a>
+		
+				<table class="cl_tbl_bankinfo" > 
+					<tr>
+						<td> 
+						
+							<a href="#" data-role="button" data-icon="home" data-iconpos="notext">&nbsp;</a>
+							
+						</td>
+						<td vertical-align='middle'>
+							<span style="padding-left:10px;font-size: 14pt; font-weight: bold; vertical-align:middle;">
+							Bank Details
+							</span>
+						</td>
+						
+					</tr>
+					
+					<tr>
+						<td colspan=2> <hr /> </td>
+					</tr>
+					<tr>
+						<td class="cl_td_banklabel"> Bank:</td>
+						<td class="cl_td_bankdata"> <span style="color:yellow;">State Bank of India(SBI)</span></td>
+					</tr>
+					<tr>
+						<td class="cl_td_banklabel"> Branch:</td>
+						<td class="cl_td_bankdata"> Pantakaluva Road Branch</td>						
+					</tr>
+					<tr>
+						<td class="cl_td_banklabel"> Name:</td>
+						<td class="cl_td_bankdata"> Sri Pavitra Gold Bullion</td>
+					</tr>
+					<tr>
+						<td class="cl_td_banklabel"> Account:</td>
+						<td class="cl_td_bankdata"> 35014224948</td>
+					</tr>
+					<tr>
+						<td class="cl_td_banklabel"> IFSC:</td>
+						<td class="cl_td_bankdata"> SBIN0012948</td>
+					</tr>
+				
+				</table>
+				
+				
+				<table class="cl_tbl_bankinfo" > 
+					<tr>
+						<td colspan=2> <hr /> </td>
+					</tr>
+					
+					<tr>
+						<td class="cl_td_banklabel"> Bank:</td>
+						<td class="cl_td_bankdata"> <span style="color:yellow;">Axis Bank</span></td>
+					</tr>
+					<tr>
+						<td class="cl_td_banklabel"> Branch:</td>
+						<td class="cl_td_bankdata"> Suryaraopet, Vijayawada</td>						
+					</tr>
+					<tr>
+						<td class="cl_td_banklabel"> Name:</td>
+						<td class="cl_td_bankdata"> Sri Pavitra Gold Bullion</td>
+					</tr>
+					<tr>
+						<td class="cl_td_banklabel"> Account:</td>
+						<td class="cl_td_bankdata"> 915020056596956</td>
+					</tr>
+					<tr>
+						<td class="cl_td_banklabel"> IFSC:</td>
+						<td class="cl_td_bankdata"> UTIB0000555</td>
+					</tr>
+					<tr>
+						<td colspan=2> <hr /> </td>
+					</tr>
+				</table>
+					
+		</div> <!--   myPopupContact   -->
+		
+		
+		
+	</div>
 	
 	
 </div><!-- /page -->
